@@ -1,0 +1,10 @@
+orbs
+dmg
+attackrate
+crit
+resource/hp - HUD
+attackrate
+mvsp
+specials
+range
+accuracy
