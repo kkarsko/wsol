@@ -1,20 +1,14 @@
-/**
- * Copyright 1998-2014 Epic Games, Inc. All Rights Reserved.
- */
 class CustomGameInfo extends GameInfo;
 
 auto State PendingMatch
 {
-Begin:
-	StartMatch();
+    StartMatch();
 }
 
 defaultproperties
 {
-	HUDType=class'GameFramework.MobileHUD'
-	PlayerControllerClass=class'CustomGame.CustomPlayerController'
-	DefaultPawnClass=class'CustomGame.CustomPawn'
-	bDelayedStart=false
+    HUDType=class'GameFramework.MobileHUD'
+    PlayerControllerClass=class'CustomGame.CustomPlayerController'
+    DefaultPawnClass=class'CustomGame.CustomPawn'
+    bDelayedStart=false
 }
-
-

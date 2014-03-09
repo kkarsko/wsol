@@ -1,8 +1,5 @@
-/**
- * Copyright 1998-2014 Epic Games, Inc. All Rights Reserved.
- */
 class CustomPawn extends GamePawn
-	config(Game);
+    config(Game);
 
 /** the amount of Resource currently available */
 var int resource;
@@ -12,15 +9,17 @@ var int rechargeInterval;
 var int rechargeAmount;
 /** the number of seconds passed since the last regeneration of resource */
 var float rechargeProgress;
-	
+    
 event Tick(float dTime) {
-	rechargeProgress += dTime;
-	if(rechargeProgress>=rechargeInterval) {
-		resource += rechargeAmount;
-		rechargeProgress = 0;
-	}
+    rechargeProgress += dTime;
+    if(rechargeProgress>=rechargeInterval) {
+        resource += rechargeAmount;
+        rechargeProgress = 0;
+    }
 }
-	
+    
 defaultproperties {
-	
+    resource = 100
+    rechargeInterval = 3
+    rechargeAmount = 5
 }
