@@ -10,18 +10,22 @@ Begin: //sadly enough, it won't compile w/o the label
 /** a hacky method for creating the necessary keybinds
  *  DO find a better solution! something with config files */
 function StartMatch() {
-    local PlayerController PlayerController;
-    local WorldInfo WorldInfo;
+    local PlayerController pc;
+    local WorldInfo wi;
+	//SetBind doesn't take literals, assign them to vars here
     local name q;
+	local name e;
     q='Q';
-    WorldInfo = class'WorldInfo'.static.GetWorldInfo();
+    e='E';
+    wi = class'WorldInfo'.static.GetWorldInfo();
     
 
-    if (WorldInfo != None) {
-      PlayerController = WorldInfo.GetALocalPlayerController();
-      if (PlayerController != None && PlayerController.PlayerInput != None) {
+    if (wi != None) {
+      pc = wi.GetALocalPlayerController();
+      if (pc != None && pc.PlayerInput != None) {
         //SET THE KEYBINDS HERE
-        PlayerController.PlayerInput.SetBind(q, "SpendResource 0");
+        pc.PlayerInput.SetBind(q, "primarySkill");
+        pc.PlayerInput.SetBind(e, "secondarySkill");
       }
     }
 }

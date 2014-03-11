@@ -10,8 +10,6 @@ var() int rechargeInterval;
 var() int rechargeAmount;
 /** the number of seconds passed since the last regeneration of resource */
 var float rechargeProgress;
-/** the cost of the primary skill, initially bound to q */
-var int primaryCost;
 
 /** in Tick() regens are handled */
 event Tick(float dTime) {
@@ -25,20 +23,20 @@ event Tick(float dTime) {
 
 /** should be overriden by subs
  *  look into inheritance! */
-exec function primarySkill() { }
+exec function primarySkill() { loseResource(10); }
 /** should be overriden by subs
  *  look into inheritance! */
-exec function secondarySkill() { }
+exec function secondarySkill() { loseResource(20); }
 
 /** call this whenever [resource] should be decreased
  *  do not manipulate [resource] directly */
-loseResource() {
-    resource -= primaryCost;
+function loseResource(int amount) {
+    resource -= amount;
 }
 
 /** call this whenever [resource] should be decreased
  *  do not manipulate [resource] directly */
-gainResource(int amount) {
+function gainResource(int amount) {
     resource += amount;
 }
 
@@ -48,5 +46,4 @@ defaultproperties //never, ever, EVER do defprop in K&R style!
     rechargeInterval=3
     rechargeAmount=1
     maxResource=100
-    primaryCost=20
 }
