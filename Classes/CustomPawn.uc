@@ -25,9 +25,10 @@ event Tick(float dTime) {
 
 /** should be overriden by subs
  *  look into inheritance! */
-exec function primarySkill() {
-    
-}
+exec function primarySkill() { }
+/** should be overriden by subs
+ *  look into inheritance! */
+exec function secondarySkill() { }
 
 /** call this whenever [resource] should be decreased
  *  do not manipulate [resource] directly */
