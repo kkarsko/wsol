@@ -23,21 +23,27 @@ event Tick(float dTime) {
 
 /** should be overriden by subs
  *  look into inheritance! */
-exec function primarySkill() { loseResource(10); }
+exec function primarySkill() { if (loseResource(10)); }
 /** should be overriden by subs
  *  look into inheritance! */
-exec function secondarySkill() { loseResource(20); }
+exec function secondarySkill() { if (loseResource(20)); }
 
 /** call this whenever [resource] should be decreased
  *  do not manipulate [resource] directly */
-function loseResource(int amount) {
+function bool loseResource(int amount) {
+    local bool neg;
     resource -= amount;
+    if(neg = (resource<0)) resource = 0;
+    return neg;
 }
 
 /** call this whenever [resource] should be decreased
  *  do not manipulate [resource] directly */
-function gainResource(int amount) {
+function bool gainResource(int amount) {
+    local bool neg;
     resource += amount;
+    if(neg = (resource<0)) resource = 0;
+    return neg;
 }
 
 defaultproperties //never, ever, EVER do defprop in K&R style!
