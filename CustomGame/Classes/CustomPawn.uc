@@ -29,21 +29,23 @@ exec function primarySkill() { if (loseResource(10)); }
 exec function secondarySkill() { if (loseResource(20)); }
 
 /** call this whenever [resource] should be decreased
- *  do not manipulate [resource] directly */
+ *  do not manipulate [resource] directly
+ *  returns false when resource would drop below zero */
 function bool loseResource(int amount) {
     local bool neg;
     resource -= amount;
     if(neg = (resource<0)) resource = 0;
-    return neg;
+    return !neg;
 }
 
 /** call this whenever [resource] should be decreased
- *  do not manipulate [resource] directly */
+ *  do not manipulate [resource] directly
+ *  returns false if resource would get above maximum */
 function bool gainResource(int amount) {
-    local bool neg;
+    local bool over;
     resource += amount;
-    if(neg = (resource<0)) resource = 0;
-    return neg;
+    if (over = (resource>maxResource)) resource = maxResource;
+    return !over;
 }
 
 defaultproperties //never, ever, EVER do defprop in K&R style!
