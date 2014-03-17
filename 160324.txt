@@ -1,0 +1,51 @@
+Alapkoncept
+    !DESIGNDOC
+    nem valtozik, visszaterunk
+    >> Lore/A jatek alapjai
+    >> GameLogic/Karaktermechanika
+
+Dokumentalas
+    meetingek osszefoglalasa
+
+Hataridok
+    Aki nincs is itt az egyetert
+    allando meeting idopont
+    hatarido a kozos nap szabadda tetelere
+    Milestonokat konkretizalni!
+    Nem vagyunk fulltime fejlesztok!
+    A szuk hatarido motival
+
+Penzugyek
+    aprogyujtogetes
+    raer meg (majd ha olyan szintre jutunk)
+    Kell penzugyi  mag!
+        veszhelyzet-elharitasra
+    
+Nev
+
+Megbesz hatekonysag
+    no off topic
+        topicot elore meghatarozni!
+    egyvalaki jegyzetelni?
+    MS project 2013
+        exceltabla
+    Deszi: no democracy!
+    Braun: no tyranny!
+
+Kommunikacio
+    Kozos gmail?
+    Info szilardnak
+        milyen formaban?
+            nem telefonon
+        Szilard koordinator, csak ha mindenrol tud
+    Drive
+
+Csapatmoral
+
+Design-day <-- fv nev
+    tobb lenne belole, problemankent
+    fejlesztesi napok
+    
+Asset manager
+    UDK --> preforce
+        free trial! (meg belenezni)
