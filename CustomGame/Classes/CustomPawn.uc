@@ -34,7 +34,8 @@ exec function secondarySkill() { if (loseResource(20)); }
 function bool loseResource(int amount) {
     local bool neg;
     resource -= amount;
-    if(neg = (resource<0)) resource = 0;
+	neg = (resource<0);
+    if(neg) resource = 0;
     return !neg;
 }
 
@@ -44,7 +45,8 @@ function bool loseResource(int amount) {
 function bool gainResource(int amount) {
     local bool over;
     resource += amount;
-    if (over = (resource>maxResource)) resource = maxResource;
+	over = (resource>maxResource);
+    if (over) resource = maxResource;
     return !over;
 }
 
