@@ -1,0 +1,30 @@
+desdoc 2.
+
+Team jobs
+    Lore
+        Char
+            Bgr
+            Concept
+                ability
+                specialization
+                    Stats
+                weapons
+            Appearance
+        Tutorial
+        Voicemote szovegek
+        Universes
+            History
+            Style
+        Popcult
+        World = Show
+            look and feel
+            announcerek
+            showelemek
+                reklamok
+            kozonseg
+            jatekmodok
+    GL
+        palyak
+            tereptargyak
+            powerupok
+        
