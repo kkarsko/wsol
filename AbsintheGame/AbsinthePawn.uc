@@ -1,4 +1,4 @@
-class CustomPawn extends GamePawn;
+class AbsinthePawn extends GamePawn;
 
 /** the amount of Resource currently available */
 var() int resource;
@@ -34,7 +34,7 @@ exec function secondarySkill() { if (loseResource(20)); }
 function bool loseResource(int amount) {
     local bool neg;
     resource -= amount;
-	neg = (resource<0);
+    neg = (resource<0);
     if(neg) resource = 0;
     return !neg;
 }
@@ -45,7 +45,7 @@ function bool loseResource(int amount) {
 function bool gainResource(int amount) {
     local bool over;
     resource += amount;
-	over = (resource>maxResource);
+    over = (resource>maxResource);
     if (over) resource = maxResource;
     return !over;
 }

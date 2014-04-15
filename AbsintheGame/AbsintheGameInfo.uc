@@ -1,4 +1,4 @@
-class CustomGameInfo extends GameInfo;
+class AbsintheGameInfo extends GameInfo;
 
 /** what does this do? */
 auto State PendingMatch
@@ -12,9 +12,9 @@ Begin: //sadly enough, it won't compile w/o the label
 function StartMatch() {
     local PlayerController pc;
     local WorldInfo wi;
-	//SetBind doesn't take literals, assign them to vars here
+    //SetBind doesn't take literals, assign them to vars here
     local name q;
-	local name e;
+    local name e;
     q='Q';
     e='E';
     wi = class'WorldInfo'.static.GetWorldInfo();
