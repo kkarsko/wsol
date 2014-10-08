@@ -1,6 +1,0 @@
-Harom szint:
-    micro - hogyan; nem beleszol, kerdez
-    Develop - mit; itt beleszol
-        atlathato
-        ertheto
-    Public - konszenzus alapjan
